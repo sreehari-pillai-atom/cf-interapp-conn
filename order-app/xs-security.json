@@ -1,0 +1,12 @@
+{
+  "scopes": [],
+  "attributes": [],
+  "role-templates": [],
+  "authorities-inheritance": false,
+  "oauth2-configuration": {
+    "token-validity": 3600,
+    "redirect-uris": [
+        "https://1c252ceatrial-dev-order-app.cfapps.us10-001.hana.ondemand.com/login/callback"
+    ]
+  }
+}

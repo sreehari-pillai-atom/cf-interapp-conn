@@ -1,0 +1,38 @@
+{
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.masterdata-read",
+      "description": "masterdata-read"
+    },
+    {
+      "name": "$XSAPPNAME.place-order",
+      "description": "place-order"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "masterdata-read",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.masterdata-read"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "place-order",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.place-order"
+      ],
+      "attribute-references": []
+    }
+  ],
+  "authorities-inheritance": false,
+  "oauth2-configuration": {
+    "token-validity": 3600,
+    "redirect-uris": [
+        "https://*.cfapps.us10-001.hana.ondemand.com/login/callback"
+    ]
+  }
+}

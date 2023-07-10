@@ -1,0 +1,36 @@
+{
+  "name": "order-app",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap-cloud-sdk/http-client": "^3.2.0",
+    "@sap/cds": "^6",
+    "@sap/xssec": "^3",
+    "express": "^4",
+    "hdb": "^0.19.0",
+    "passport": "^0"
+  },
+  "devDependencies": {
+    "sqlite3": "^5"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "cds": {
+    "requires": {
+      "auth": "xsuaa",
+      "db": "hana-cloud",
+      "MasterData": {
+        "kind": "odata-v4",
+        "model": "srv/external/MasterData",
+        "credentials": {
+          "destination": "MasterData",
+          "path": "/master-data"
+        }
+      }
+    }
+  }
+}
